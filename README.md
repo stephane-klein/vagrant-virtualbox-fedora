@@ -4,26 +4,31 @@
 
 Step1: disable secure boot.
 
+Next [based on this message](https://discussion.fedoraproject.org/t/what-is-the-best-way-of-installing-virtualbox-on-f37/74926) :
+
 ```sh
-$ sudo curl https://download.virtualbox.org/virtualbox/rpm/fedora/virtualbox.repo -o /etc/yum.repos.d/virtualbox.repo 
-$ sudo dnf install kernel-devel vagrant VirtualBox-6.1 -y
-$ sudo /sbin/vboxconfig
+$ sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+$ sudo dnf install -y VirtualBox
+```
+
+Install Vagrant `v2.3.4` (version not provider by default Fedora repository):
+
+```
+$ sudo dnf install -y dnf-plugins-core
+$ sudo dnf config-manager --add-repo https://rpm.releases.hashicorp.com/fedora/hashicorp.repo
+$ sudo dnf -y install vagrant
+```
+
+
+```sh
 $ vagrant --version
-Vagrant 2.2.16
+Vagrant 2.3.4
 ```
-
-If you use Vagrant version < `2.2.18`, then you must execute:
 
 ```sh
-cat <<EOF | sudo tee /etc/vbox/networks.conf
-
-* 192.0.0.0/8
-* 172.0.0.0/8
-* 10.0.0.0/8
-EOF
+$ VBoxManage --version
+7.0.6_rpmfusionr155176
 ```
-
-More information [here](https://github.com/Yohnah-org/Docker/issues/3#issuecomment-951118532).
 
 ## Start and enter in guest VM
 
