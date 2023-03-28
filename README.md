@@ -30,6 +30,15 @@ $ VBoxManage --version
 7.0.6_rpmfusionr155176
 ```
 
+Put this content:
+
+```
+* 0.0.0.0/0 ::/0
+```
+
+in `/etc/vbox/networks.conf` file.
+
+
 ## Start and enter in guest VM
 
 ```sh
