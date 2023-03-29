@@ -1,4 +1,7 @@
-# Install Vagrant + VirtualBox provider on Fedora
+# Install Vagrant + VirtualBox provider on Fedora Workstation
+
+Host: Fedora Workstation 37  
+Guest: Ubuntu 2210
 
 ## Prepare your computer
 
