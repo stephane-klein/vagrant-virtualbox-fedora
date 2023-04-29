@@ -30,7 +30,7 @@ Vagrant 2.3.4
 
 ```sh
 $ VBoxManage --version
-7.0.6_rpmfusionr155176
+7.0.8_rpmfusionr156879
 ```
 
 ```sh
