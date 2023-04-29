@@ -35,7 +35,9 @@ $ VBoxManage --version
 
 ```sh
 $ cat <<EOF > /etc/vbox/networks.conf
-* 0.0.0.0/0 ::/0
+* 192.0.0.0/8
+* 172.0.0.0/8
+* 10.0.0.0/8
 EOF
 ```
 
@@ -43,6 +45,7 @@ EOF
 ## Start and enter in guest VM
 
 ```sh
+$ vagrant box update  # can fix some issue, like https://github.com/stephane-klein/vagrant-virtualbox-fedora/issues/1
 $ vagrant up
 $ vagrant ssh
 ```
