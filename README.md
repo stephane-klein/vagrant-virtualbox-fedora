@@ -7,33 +7,33 @@ Guest: [Ubuntu 24.04 LTS](https://en.wikipedia.org/wiki/Ubuntu_version_history#U
 
 ## Prepare your computer
 
-- 1. disable secure boot.
-- 2. Configure RPM Fusion (if you haven't already):
+1. disable secure boot.
+2. Configure RPM Fusion (if you haven't already):
 
 ```sh
 $ sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 ```
 
-- 3. Install VirtualBox package
+3. Install VirtualBox package
 
 ```sh
 $ sudo dnf install -y VirtualBox
 ```
 
-- 4. Configure Hashicorp RPM repository to install Vagrant (if you haven't already):
+4. Configure Hashicorp RPM repository to install Vagrant (if you haven't already):
 
 ```sh
 $ sudo dnf install -y dnf-plugins-core
 $ sudo dnf config-manager --add-repo https://rpm.releases.hashicorp.com/fedora/hashicorp.repo
 ```
 
-- 5. Install Vagrant:
+5. Install Vagrant:
 
 ```sh
 $ sudo dnf -y install vagrant
 ```
 
-- 6. Checking installed versions:
+6. Checking installed versions:
 
 ```sh
 $ vagrant version
