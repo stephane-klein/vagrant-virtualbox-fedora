@@ -1,6 +1,6 @@
 # Install Vagrant + VirtualBox provider on Fedora Workstation
 
-Host: Fedora Workstation 40  
+Host: Fedora Workstation 41  
 Guest: [Ubuntu 24.04 LTS](https://en.wikipedia.org/wiki/Ubuntu_version_history#Ubuntu_24.04_LTS_(Noble_Numbat))
 
 [VirtualBox](https://en.wikipedia.org/wiki/VirtualBox) package is installed from [RPM Fusion](https://rpmfusion.org) repository.
