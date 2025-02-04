@@ -37,23 +37,13 @@ $ sudo dnf -y install vagrant
 
 ```sh
 $ vagrant version
-Installed Version: 2.4.1
-Latest Version: 2.4.1
+Installed Version: 2.4.3
+Latest Version: 2.4.3
 ```
 
 ```sh
 $ VBoxManage --version
-7.0.16_rpmfusionr162802
-```
-
-At the time of writing, Vagrant is not compatible with the latest version of Virtualbox: <https://github.com/hashicorp/vagrant/issues/13501>.
-
-```sh
-$ cat <<EOF > /etc/vbox/networks.conf
-* 192.0.0.0/8
-* 172.0.0.0/8
-* 10.0.0.0/8
-EOF
+7.1.4_rpmfusionr165100
 ```
 
 ## Vagrant Ubuntu image
